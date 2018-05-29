@@ -9,9 +9,9 @@ namespace LearningASP.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public string Index()
+        public ActionResult Index()
         {
-            return "Hello World";
+            return RedirectToAction("GetAllCustomers", "Customer");
         }
     }
 }
