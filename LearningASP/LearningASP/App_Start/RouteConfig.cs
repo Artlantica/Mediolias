@@ -14,10 +14,20 @@ namespace LearningASP
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+               "Employee", "Employee/{name}", new
+               {
+                   controller = "Employee",
+                   action = "Search",
+                   name = UrlParameter.Optional
+               });
+
+            routes.MapRoute(
+               name: "Default", url: "{controller}/{action}/{id}", defaults: new
+               {
+                   controller = "Home",
+                   action = "Index",
+                   id = UrlParameter.Optional
+               });
         }
     }
 }
