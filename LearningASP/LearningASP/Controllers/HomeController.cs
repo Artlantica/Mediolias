@@ -35,12 +35,16 @@ namespace LearningASP.Controllers
             var input = Server.HtmlEncode(name);
             return Content(input);
         }
-
         
         public ActionResult Search()
         {
             var input = "Another Search action";
             return Content(input);
+        }
+
+        public ActionResult DemoView()
+        {
+            return View();
         }
     }
 }
