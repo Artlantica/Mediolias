@@ -15,13 +15,17 @@ namespace LearningASP.Controllers
         {
             return RedirectToAction("GetAllCustomers", "Customer");
         }
-        
-        [OutputCache(Duration = 20)]
+
+        [ActionName("CurrentTime")]
         public string GetCurrentTime()
         {
-            // Output will be same in 20s
-            // After 20s, output will be change
-            return DateTime.Now.ToString("T");
+            return TimeString();
+        }
+
+        [NonAction]
+        public string TimeString()
+        {
+            return "Time is " + DateTime.Now.ToString("T");
         }
     }
 }
