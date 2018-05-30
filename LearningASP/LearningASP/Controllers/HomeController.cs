@@ -27,5 +27,20 @@ namespace LearningASP.Controllers
         {
             return "Time is " + DateTime.Now.ToString("T");
         }
+
+        [HttpGet]
+        public ActionResult Search(string name)
+        {
+            // Access by route /Home/Search?name=123
+            var input = Server.HtmlEncode(name);
+            return Content(input);
+        }
+
+        
+        public ActionResult Search()
+        {
+            var input = "Another Search action";
+            return Content(input);
+        }
     }
 }
