@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningASP.ActionFilters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,7 @@ using System.Web.Mvc;
 
 namespace LearningASP.Controllers
 {
+    [MyLogActionFilter]
     public class HomeController : Controller
     {
         // GET: Home
